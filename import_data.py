@@ -4,8 +4,8 @@ import pandas as pd
 #Connect to mysql
 mydb = mysql.connector.connect(
   host="localhost",
-  user="root",
-  password=""
+  user="pythonuser",
+  password="password123"
 )
 mycursor = mydb.cursor()
 
