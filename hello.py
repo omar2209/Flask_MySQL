@@ -6,8 +6,8 @@ app = Flask(__name__)
 def get_db_data():
     mydb = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="",
+        user="pythonuser",
+        password="password123",
         database="CLASH_ROYALE"
     )
     cursor = mydb.cursor()
