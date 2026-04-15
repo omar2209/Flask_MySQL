@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Clash Royale Units</title>
+</head>
+<body>
+    <h1>Clash Royale Units</h1>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Cost</th>
+                <th>Hit Speed</th>
+                <th>Speed</th>
+                <th>Deploy Time</th>
+                <th>Range</th>
+                <th>Target</th>
+                <th>Count</th>
+                <th>Transport</th>
+                <th>Type</th>
+                <th>Rarity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for unit in units %}
+            <tr>
+                {% for col in unit %}
+                <td>{{ col }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
