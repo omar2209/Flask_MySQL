@@ -28,15 +28,29 @@ def getAllData():
 
 @app.route("/air_transport")
 def airTransport():
-    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE transport = 'Air'"
+    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE transport = 'Air' "
     mycursor.execute(query)
     units = mycursor.fetchall()
     return str(units)
 
 @app.route("/epic_units")
 def epicUnits():
-    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE rarity = 'Epic'"
+    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE rarity = 'Epic' "
     mycursor.execute(query)
     units = mycursor.fetchall()
     return str(units)
 
+#A scelta
+@app.route("/ground_target")
+def groundTarget():
+    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE target = 'Ground' "
+    mycursor.execute(query)
+    units = mycursor.fetchall()
+    return str(units)
+
+@app.route("/null_type")
+def nullType():
+    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE target = 'null' "
+    mycursor.execute(query)
+    units = mycursor.fetchall()
+    return str(units)
