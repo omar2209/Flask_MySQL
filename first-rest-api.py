@@ -25,3 +25,18 @@ def getAllData():
         print(x);
         result.append(x);
     return result
+
+@app.route("/air_transport")
+def airTransport():
+    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE transport = 'Air'"
+    mycursor.execute(query)
+    units = mycursor.fetchall()
+    return str(units)
+
+@app.route("/epic_units")
+def epicUnits():
+    query = "SELECT * FROM CLASH_ROYALE.Clash_Unit WHERE rarity = 'Epic'"
+    mycursor.execute(query)
+    units = mycursor.fetchall()
+    return str(units)
+
